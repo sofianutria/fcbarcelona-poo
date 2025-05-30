@@ -1,6 +1,9 @@
-package org.fcbarcelona;
+package org.poo.fcbarcelona;
 
-public class Player extends ClubMember {
+import org.poo.interfaces.MatchDay;
+import org.poo.interfaces.MedicalService;
+
+public class Player extends ClubMember implements MatchDay, MedicalService {
     private String position;
     private int value;
 
@@ -34,5 +37,26 @@ public class Player extends ClubMember {
         return "My full name is " + super.getName() + " " + super.getSurname()
                 + ". I'm " + super.getAge() + " years old and I'm from " + super.getCountry()
                 + ". I play as a " + this.position + " and my value is " + this.value;
+    }
+
+    // Creamos los métodos de los interfaces.
+    @Override
+    public void checkCallHour() {
+        System.out.println("The call hour is 2 hours before the match");
+    }
+
+    @Override
+    public void checkMaterial() {
+        System.out.println("Please, don't forget to bring your cleats");
+    }
+
+    @Override
+    public void checkMedicalTeam() {
+        System.out.println("Your assigned medical team is: Dr. Martínez (physio) and Dra. Santos (dietitian)");
+    }
+
+    @Override
+    public void checkNutritionPlan() {
+        System.out.println("You have to eat pasta 4 hours before the match");
     }
 }

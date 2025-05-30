@@ -1,6 +1,8 @@
-package org.fcbarcelona;
+package org.poo.fcbarcelona;
 
-public class Staff extends ClubMember {
+import org.poo.interfaces.MatchDay;
+
+public class Staff extends ClubMember implements MatchDay {
     private String job;
     private int salary;
 
@@ -31,5 +33,15 @@ public class Staff extends ClubMember {
         return "My full name is " + super.getName() + " " + super.getSurname()
                 + ". I'm " + super.getAge() + " years old and I'm from " + super.getCountry()
                 + ". I work as a " + this.job + " and my salary is " + this.salary;
+    }
+
+    @Override
+    public void checkCallHour() {
+        System.out.println("The call hour is 3 hours before the match");
+    }
+
+    @Override
+    public void checkMaterial() {
+        System.out.println("Don't forget to bring the blackboard");
     }
 }
