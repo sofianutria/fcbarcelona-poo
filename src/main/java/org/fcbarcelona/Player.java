@@ -26,6 +26,9 @@ public class Player extends ClubMember {
         this.value = value;
     }
 
+    //Al ser el método introduce abstracto en la clase ClubMember me obliga a
+    // implementar el método introduce de la clase hija (player) (aunque ya lo había hecho
+    //  antes, al igual que en staff)
     @Override
     public String introduce() {
         return "My full name is " + super.getName() + " " + super.getSurname()
