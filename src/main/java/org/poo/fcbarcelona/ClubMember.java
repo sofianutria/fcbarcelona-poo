@@ -1,4 +1,4 @@
-package org.fcbarcelona;
+package org.poo.fcbarcelona;
 
 public abstract class ClubMember {
     private String name;
