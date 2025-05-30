@@ -2,9 +2,9 @@ package org.fcbarcelona;
 
 public class Main {
     public static void main (String[] args){
-        //Prueba de la clase ClubMember
-        ClubMember trainer = new ClubMember("Hansi","Flick",60, "Germany");
-        System.out.println(trainer.introduce());
+        //Prueba de la clase ClubMember, al convertir la clase abstract ya no podemos crear el objeto ClubMember.
+        /*ClubMember trainer = new ClubMember("Hansi","Flick",60, "Germany");
+        System.out.println(trainer.introduce());*/
 
         //Prueba de la clase Player
         Player lamine = new Player("Lamine Yamal", "Nasraoui", 17, "Spain", "Forward", 180000000);

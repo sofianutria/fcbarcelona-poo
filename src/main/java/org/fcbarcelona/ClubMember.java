@@ -1,6 +1,6 @@
 package org.fcbarcelona;
 
-public class ClubMember {
+public abstract class ClubMember {
     private String name;
     private String surname;
     private int age;
@@ -45,8 +45,10 @@ public class ClubMember {
         this.country = country;
     }
 
-    public String introduce() {
+    public abstract String introduce();
+    //Al convertir el método en abstract ya no se implementa
+    /*{
         return "My full name is " + this.name + " " + this.surname
                 + ". I'm " + this.age + " years old and I'm from " + this.country;
-    }
+    }*/
 }
